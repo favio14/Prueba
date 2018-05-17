@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>SUMA DE DOS NUMEROS </title>
+</head>
+<body>
+<script languaje="javascript">
+var numero01;
+var numero02;
+var resultado;
+function sumar()
+{
+ numero01=parseInt(document.formulario01.nr01.value);
+ numero02=parseInt(document.formulario01.nr02.value);
+ resultado=numero01+numero02;
+ document.formulario01.result.value=resultado;
+}
+<!--se llama funcion restar-->
+function restar()
+{
+ numero01=parseInt(document.formulario01.nr01.value);
+ numero02=parseInt(document.formulario01.nr02.value);
+ resultado=numero01-numero02;
+ document.formulario01.result.value=resultado;
+}
+<!--funcion multipicar-->
+function multiplicar()
+{
+ numero01=parseInt(document.formulario01.nr01.value);
+ numero02=parseInt(document.formulario01.nr02.value);
+ resultado=numero01*numero02;
+ document.formulario01.result.value=resultado;
+}
+<!--funcion divicion-->
+function divicion()
+{
+ numero01=parseInt(document.formulario01.nr01.value);
+ numero02=parseInt(document.formulario01.nr02.value);
+ resultado=numero01/numero02;
+ document.formulario01.result.value=resultado;
+}
+</script>
+<h2>suma de dos numeros </h2>
+ <form name="formulario01">
+ digitar numero 1: <input type="text" id="nr01"/><br />
+ digitar numero 2: <input type="text" id="nr02"/><br />
+ resultado: <input type="text" id="result"/><br />
+ <input type="button" value="sumar" onclick="sumar()">
+ <input type="button" value="restar" onclick="restar()">
+ <input type="button" value="mutiplicar" onclick="multiplicar()">
+ <input type="button" value="divicion" onclick="divicion()">
+ </form>
+</body>
+</html>

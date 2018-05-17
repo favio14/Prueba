@@ -1,0 +1,40 @@
+<html >
+  <head>
+  <title>Operaciones con numeros</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+      var nro1;
+      var nro2;
+      var resultado;
+      var ops;
+      function calcular()
+      {
+        nro1=parseInt(document.formulario2.nro1.value);
+        nro2=parseInt(document.formulario2.nro2.value);
+        opc=document.formulario2.opcion.value;
+        switch (opc) {
+          case "1": resultado=nro1+nro2; break;
+          case "2": resultado=nro1-nro2; break;
+          case "3": resultado=nro1*nro2; break;
+          case "4": resultado=nro1/nro2; break;
+        }
+        document.formulario2.result.value=resultado;
+      }
+  </script>
+  <form name="formulario2">
+  <h2>OPERACIONES CON NUMEROS</h2>
+  Digitar N° 1: <input type="text" placeholder="Ingrese el numeo 1" id="nro1"/> <br/><br/>
+  Digitar N° 2: <input type="text" placeholder="Ingrese el numeo 2" id="nro2"/><br/><br/>
+  Seleccionar operación
+  <select name="opcion"><!-- combo box -->
+  <option value="1">Suma</option>
+  <option value="2">Resta</option>
+  <option value="3">Multiplicar</option>
+  <option value="4">Dividir</option>
+  </select><br/><br/>
+  Resultado <input type="text" placeholder="Resultado" id="result"/><br/>
+  <input type="button" value="Calcular" onclick="calcular()">
+  </form>
+  </body>
+</html>
